@@ -1,0 +1,9 @@
+.vs
+*\obj
+*\bin
+*\packages
+*.dll
+*.exe
+*.nupkg
+*.dll.config
+*.com
