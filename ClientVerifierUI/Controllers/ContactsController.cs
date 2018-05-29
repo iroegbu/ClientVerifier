@@ -18,26 +18,5 @@ namespace ClientVerifierUI.Controllers
             var contactModel = new ContactModel();
             return contactModel.Get(10000);
         }
-
-        // GET api/contacts/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST api/contacts
-        public void Post([FromBody]string value)
-        {
-        }
-
-        // PUT api/contacts/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/contacts/5
-        public void Delete(int id)
-        {
-        }
     }
 }
