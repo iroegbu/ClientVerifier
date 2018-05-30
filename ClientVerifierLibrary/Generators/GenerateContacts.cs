@@ -24,7 +24,8 @@ namespace ClientVerifierLibrary.Generators
                 yield return new ContactEntity()
                 {
                     ContactID = i,
-                    ContactName = $"{FirstNames.ElementAt(Rand.Next(FirstNames.Count))} {LastNames.ElementAt(Rand.Next(LastNames.Count))}"
+                    ContactName = $"{FirstNames.ElementAt(Rand.Next(FirstNames.Count))} {LastNames.ElementAt(Rand.Next(LastNames.Count))}",
+                    Location = Rand.Next(10)
                 };
             }
         }

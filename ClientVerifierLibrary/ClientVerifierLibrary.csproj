@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Contact\ContactConnection.cs" />
     <Compile Include="Contact\ContactEntity.cs" />
+    <Compile Include="Generators\GenerateConnections.cs" />
     <Compile Include="Generators\GenerateContacts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

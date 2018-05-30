@@ -177,12 +177,14 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\ConnectionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Handlers\ChunkedTransfer.cs" />
+    <Compile Include="Models\Connection\ConnectionModel.cs" />
     <Compile Include="Models\Contact\ContactModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

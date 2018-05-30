@@ -10,5 +10,6 @@ namespace ClientVerifierLibrary.Contact
     {
         public int ContactID { get; set; }
         public string ContactName { get; set; }
+        public int Location { get; set; }
     }
 }
