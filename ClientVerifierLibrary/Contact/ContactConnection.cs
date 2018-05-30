@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClientVerifierLibrary.Contact
 {
-    class ContactConnection
+    public class ContactConnection
     {
-        private ContactEntity Source { get; set; }
-        private ContactEntity Target { get; set; }
+        public int CommuncationFrequency { get; set; }
+        public ContactEntity Source { get; set; }
+        public ContactEntity Target { get; set; }
     }
 }
