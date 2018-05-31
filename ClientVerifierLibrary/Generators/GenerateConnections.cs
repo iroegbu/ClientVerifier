@@ -21,24 +21,25 @@ namespace ClientVerifierLibrary.Generators
         public IEnumerable<ContactConnection> Generate(List<ContactEntity> Contacts)
         {
             var Rand = new Random();
-            
-            foreach(var Source in Contacts)
+
+            foreach (var Source in Contacts)
             {
-                Contacts.Remove(Source);
-                ContactEntity[] _Contacts = new ContactEntity[Contacts.Count];
-                Contacts.CopyTo(_Contacts);
-                var ConnectionCount = Rand.Next(MaxConnections);
-                for (var i = 0; i < ConnectionCount; i++)
+                var Targets = SelectContact(Contacts, Source, Rand.Next(MaxConnections));
+                foreach (var _Target in Targets)
                 {
                     yield return new ContactConnection()
                     {
                         Source = Source,
-                        Target = _Contacts.ElementAt(Rand.Next()),
+                        Target = _Target,
                         CommuncationFrequency = Rand.Next(MaxCommunicationFrequecy)
                     };
                 }
-                
             }
+        }
+
+        private List<ContactEntity> SelectContact(List<ContactEntity> HayStack, ContactEntity Contact, int Number)
+        {
+            return HayStack.OrderBy(element => Guid.NewGuid()).Take(Number).ToList();
         }
     }
 }
