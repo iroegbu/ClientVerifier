@@ -23,7 +23,7 @@ namespace ClientVerifierUI.Controllers
         private List<ContactEntity> PopulateContacts()
         {
             var contactModel = new ContactModel();
-            return contactModel.Get(10000).ToList();
+            return contactModel.Get(1000).ToList();
         }
     }
 }
