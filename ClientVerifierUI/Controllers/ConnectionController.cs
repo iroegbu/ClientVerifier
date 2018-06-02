@@ -1,6 +1,7 @@
 ﻿using ClientVerifierLibrary.Contact;
 using ClientVerifierUI.Models.Connection;
 using ClientVerifierUI.Models.Contact;
+using ClientVerifierUI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,15 +16,7 @@ namespace ClientVerifierUI.Controllers
         // GET api/connection
         public IEnumerable<ContactConnection> Get()
         {
-            var connectionsModel = new ConnectionModel();
-            var Connections = connectionsModel.Get(PopulateContacts(), 7);
-            return Connections;
-        }
-
-        private List<ContactEntity> PopulateContacts()
-        {
-            var contactModel = new ContactModel();
-            return contactModel.Get(1000).ToList();
+            return GenerateConnections.PopulateConnections(GenerateContacts.PopulateContacts(10000));
         }
     }
 }

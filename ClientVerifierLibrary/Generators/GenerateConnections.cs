@@ -10,12 +10,10 @@ namespace ClientVerifierLibrary.Generators
     public class GenerateConnections
     {
         private int MaxConnections;
-        private int MaxCommunicationFrequecy;
 
-        public GenerateConnections(int MaxConnections, int MaxCommunicationFrequecy = 10)
+        public GenerateConnections(int MaxConnections)
         {
             this.MaxConnections = MaxConnections;
-            this.MaxCommunicationFrequecy = MaxCommunicationFrequecy;
         }
 
         public IEnumerable<ContactConnection> Generate(List<ContactEntity> Contacts)
