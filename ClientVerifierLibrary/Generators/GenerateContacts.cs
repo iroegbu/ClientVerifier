@@ -10,10 +10,12 @@ namespace ClientVerifierLibrary.Generators
     public class GenerateContacts
     {
         private int ContactCount;
+        private int MaxCommunicationFrequecy;
 
-        public GenerateContacts(int Count)
+        public GenerateContacts(int Count, int Frequency)
         {
             ContactCount = Count;
+            MaxCommunicationFrequecy = Frequency;
         }
 
         public IEnumerable<ContactEntity> Generate(List<string> FirstNames, List<string> LastNames)
@@ -25,7 +27,8 @@ namespace ClientVerifierLibrary.Generators
                 {
                     ContactID = i,
                     ContactName = $"{FirstNames.ElementAt(Rand.Next(FirstNames.Count))} {LastNames.ElementAt(Rand.Next(LastNames.Count))}",
-                    Location = Rand.Next(10)
+                    Location = Rand.Next(10),
+                    CommuncationFrequency = Rand.Next(MaxCommunicationFrequecy)
                 };
             }
         }

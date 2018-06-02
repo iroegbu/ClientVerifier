@@ -8,7 +8,6 @@ namespace ClientVerifierLibrary.Contact
 {
     public class ContactConnection
     {
-        public int CommuncationFrequency { get; set; }
         public ContactEntity Source { get; set; }
         public ContactEntity Target { get; set; }
     }
