@@ -31,7 +31,6 @@ namespace ClientVerifierLibrary.Generators
                     {
                         Source = Source,
                         Target = _Target,
-                        CommuncationFrequency = Rand.Next(MaxCommunicationFrequecy)
                     };
                 }
             }

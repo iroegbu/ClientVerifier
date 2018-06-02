@@ -8,8 +8,24 @@ namespace ClientVerifierLibrary.Graph
 {
     class Node<T>
     {
+        private int cost;
         public T Value { get; set; }
-        public int Cost { get; set; }
+        public string Label { get; set; }
+        public int Cost
+        {
+            get
+            {
+                if (Parent != null)
+                {
+                    return Parent.Cost + cost;
+                }
+                else
+                {
+                    return cost;
+                }
+            }
+            set { cost = value; }
+        }
         public int Heuristics { get; set; }
         public Node<T> Parent { get; set; }
         public List<Node<T>> Children { get; set; }
