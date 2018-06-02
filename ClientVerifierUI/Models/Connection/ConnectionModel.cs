@@ -9,9 +9,9 @@ namespace ClientVerifierUI.Models.Connection
 {
     public class ConnectionModel
     {
-        public IEnumerable<ContactConnection> Get(List<ContactEntity> Contacts, int MaxConnections, int MaxCommunicationFrequecy = 10)
+        public IEnumerable<ContactConnection> Get(List<ContactEntity> Contacts, int MaxConnections)
         {
-            var Generator = new GenerateConnections(MaxConnections, MaxCommunicationFrequecy);
+            var Generator = new GenerateConnections(MaxConnections);
 
             return Generator.Generate(Contacts);
         }
