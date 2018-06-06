@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientVerifierLibrary.Graph
 {
-    class Node<T>
+    public class Node<T>
     {
         private int cost;
         public T Value { get; set; }

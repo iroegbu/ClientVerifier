@@ -36,7 +36,7 @@ namespace ClientVerifierLibrary.Generators
 
         private List<ContactEntity> SelectContact(List<ContactEntity> HayStack, ContactEntity Contact, int Number)
         {
-            return HayStack.OrderBy(element => Guid.NewGuid()).Take(Number).ToList();
+            return HayStack.Where(c => !c.Equals(Contact)).OrderBy(element => Guid.NewGuid()).Take(Number).ToList();
         }
     }
 }

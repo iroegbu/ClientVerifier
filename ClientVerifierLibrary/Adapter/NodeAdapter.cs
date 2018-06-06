@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ClientVerifierLibrary.Adapter
 {
-    class NodeAdapter
+    public class NodeAdapter
     {
         public Node<int> FromContacts(List<ContactEntity> Contacts, List<ContactConnection> Connections, Node<int> ContactParent = null)
         {
@@ -18,6 +18,7 @@ namespace ClientVerifierLibrary.Adapter
                 foreach (var Contact in Contacts)
                 {
                     var ContactConnections = SortConnections(Contact, Connections);
+                    Connections.RemoveAll(c => c.Source.Equals(Contact));
                     CurrentNode = new Node<int>()
                     {
                         Value = Contact.ContactID,
@@ -26,7 +27,7 @@ namespace ClientVerifierLibrary.Adapter
                         Heuristics = Contact.Location,
                         Parent = ContactParent
                     };
-                    CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Source, Connections, CurrentNode)).ToList();
+                    CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Target, Connections)).ToList();
                     return CurrentNode;
                 }
             }
@@ -40,6 +41,7 @@ namespace ClientVerifierLibrary.Adapter
         public Node<int> FromContact(ContactEntity Contact, List<ContactConnection> Connections, Node<int> ContactParent = null)
         {
             var ContactConnections = SortConnections(Contact, Connections);
+            Connections.RemoveAll(c => c.Source.Equals(Contact));
             var CurrentNode = new Node<int>()
             {
                 Value = Contact.ContactID,
@@ -48,14 +50,15 @@ namespace ClientVerifierLibrary.Adapter
                 Heuristics = Contact.Location,
                 Parent = ContactParent
             };
-            CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Source, Connections, CurrentNode)).ToList();
+            //endless recursion.
+            CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Target, Connections)).ToList();
 
             return CurrentNode;
         }
 
-        public List<ContactConnection> SortConnections(ContactEntity Contact, List<ContactConnection> Connections)
+        private IEnumerable<ContactConnection> SortConnections(ContactEntity Contact, List<ContactConnection> Connections)
         {
-            return Connections.Where(c => c.Source.ContactID.Equals(Contact)).ToList();
+            return Connections.Where(c => c.Source.Equals(Contact)).ToList();
         }
     }
 }
