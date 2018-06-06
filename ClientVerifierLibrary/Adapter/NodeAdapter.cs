@@ -27,7 +27,7 @@ namespace ClientVerifierLibrary.Adapter
                         Heuristics = Contact.Location,
                         Parent = ContactParent
                     };
-                    CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Target, Connections)).ToList();
+                    CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Target, Connections, CurrentNode)).ToList();
                     return CurrentNode;
                 }
             }
@@ -50,8 +50,7 @@ namespace ClientVerifierLibrary.Adapter
                 Heuristics = Contact.Location,
                 Parent = ContactParent
             };
-            //endless recursion.
-            CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Target, Connections)).ToList();
+            CurrentNode.Children = ContactConnections.Select(n => FromContact(n.Target, Connections, CurrentNode)).ToList();
 
             return CurrentNode;
         }

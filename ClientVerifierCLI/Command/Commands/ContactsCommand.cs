@@ -23,7 +23,7 @@ namespace ClientVerifierCLI.Command.Commands
 
             return new ContactsResponse()
             {
-                ResponseMessage = $"{parameter.NumberOfContacts} Contacts generated",
+                ResponseMessage = $"{parameter.NumberOfContacts}\tContacts generated",
                 Payload = Contacts,
                 ResponseTime = watch.Elapsed
             };

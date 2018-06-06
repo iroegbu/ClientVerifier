@@ -15,20 +15,33 @@ namespace ClientVerifierCLI.Command.Commands
     class ConnectionsCommand : ICommand
     {
         private ConnectionsParameter parameter;
+        private List<ContactEntity> Contacts;
 
         public IResponse Run()
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            var Contacts = GenerateContacts.PopulateContacts(parameter.NumberOfContacts);
+            var message = RunChildCommand(parameter.NumberOfContacts);
             var Connections = GetConnections(Contacts, parameter.NumberOfConnections);
             watch.Stop();
 
             return new ConnectionsResponse()
             {
-                ResponseMessage = $"{parameter.NumberOfContacts}\tContacts generated.{Environment.NewLine}{parameter.NumberOfConnections}\tConnections generated.",
+                ResponseMessage = $"{message}.{Environment.NewLine}{parameter.NumberOfConnections}\tConnections generated.",
                 Payload = Connections,
                 ResponseTime = watch.Elapsed
             };
+        }
+
+        private string RunChildCommand(int NumberOfContacts)
+        {
+            var ContactsCommand = new ContactsCommand();
+            string[] args = { "", parameter.NumberOfContacts.ToString() };
+            ContactsParameter contactParameter = new ContactsParameter(args);
+            ContactsCommand.SetParameters(contactParameter);
+            var response = ContactsCommand.Run();
+
+            Contacts = response.Payload() as List<ContactEntity>;
+            return response.ResponseMessage();
         }
 
         public void SetParameters(IParameter parameter)

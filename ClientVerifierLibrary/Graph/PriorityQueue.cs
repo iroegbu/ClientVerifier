@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClientVerifierLibrary.Graph
 {
-    class PriorityQueue<T> : Collection<Node<T>>
+    class PriorityQueue<T> : Collection<Node<T>> where T : IComparable
     {
         public Node<T> Pop()
         {
