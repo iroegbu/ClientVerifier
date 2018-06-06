@@ -16,7 +16,7 @@ namespace ClientVerifierUI.Controllers
         // GET api/connection
         public IEnumerable<ContactConnection> Get()
         {
-            return GenerateConnections.PopulateConnections(GenerateContacts.PopulateContacts(10000));
+            return GenerateConnections.PopulateConnections(GenerateContacts.PopulateContacts(1000));
         }
     }
 }

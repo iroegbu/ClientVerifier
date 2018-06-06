@@ -12,7 +12,7 @@ namespace ClientVerifierLibrary.Generators
         private int ContactCount;
         private int MaxCommunicationFrequecy;
 
-        public GenerateContacts(int Count, int Frequency)
+        public GenerateContacts(int Count, int Frequency = 10)
         {
             ContactCount = Count;
             MaxCommunicationFrequecy = Frequency;
@@ -28,7 +28,7 @@ namespace ClientVerifierLibrary.Generators
                     ContactID = i,
                     ContactName = $"{FirstNames.ElementAt(Rand.Next(FirstNames.Count))} {LastNames.ElementAt(Rand.Next(LastNames.Count))}",
                     Location = Rand.Next(10),
-                    CommuncationFrequency = Rand.Next(MaxCommunicationFrequecy)
+                    CommuncationFrequency = Rand.Next(1, MaxCommunicationFrequecy)
                 };
             }
         }
