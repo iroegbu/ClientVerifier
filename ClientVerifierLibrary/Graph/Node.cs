@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientVerifierLibrary.Graph
 {
-    public class Node<T>
+    public class Node<T> where T : IComparable
     {
         private int cost;
         public T Value { get; set; }
@@ -29,5 +29,9 @@ namespace ClientVerifierLibrary.Graph
         public int Heuristics { get; set; }
         public Node<T> Parent { get; set; }
         public List<Node<T>> Children { get; set; }
+        public bool IsEqual(T Value)
+        {
+            return Value.CompareTo(Value) == 0;
+        }
     }
 }

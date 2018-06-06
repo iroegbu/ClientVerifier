@@ -63,6 +63,7 @@
     <Compile Include="Services\Contacts\Helper.cs" />
     <Compile Include="Services\Connections\GenerateConnections.cs" />
     <Compile Include="Services\Contacts\GenerateContacts.cs" />
+    <Compile Include="Services\Search\FindContactPath.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
