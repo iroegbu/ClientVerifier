@@ -34,9 +34,9 @@ namespace ClientVerifierCLI.Command.Commands
             this.parameter = parameter as ContactsParameter;
         }
 
-        public void SetState()
+        public void SetState(object Nothing)
         {
-            throw new NotImplementedException();
+            //no state before this
         }
 
         private List<ContactEntity> GetContacts(int NotOfContacts)

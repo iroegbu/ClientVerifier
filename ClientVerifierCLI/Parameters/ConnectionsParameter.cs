@@ -9,7 +9,7 @@ namespace ClientVerifierCLI.Parameters
     class ConnectionsParameter : IParameter
     {
         public int NumberOfConnections { get; } = 0;
-        public int NumberOfContacts { get; } = 0;
+        public int NumberOfContacts { get; } = 1000;
 
         public ConnectionsParameter(string[] args)
         {
