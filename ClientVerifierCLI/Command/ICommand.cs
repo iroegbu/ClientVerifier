@@ -11,7 +11,7 @@ namespace ClientVerifierCLI.Command
     interface ICommand
     {
         void SetParameters(IParameter parameter);
-        void SetState();
+        void SetState(object State);
         IResponse Run();
     }
 }

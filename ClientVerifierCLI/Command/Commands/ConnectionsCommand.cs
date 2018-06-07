@@ -20,28 +20,15 @@ namespace ClientVerifierCLI.Command.Commands
         public IResponse Run()
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            var message = RunChildCommand(parameter.NumberOfContacts);
             var Connections = GetConnections(Contacts, parameter.NumberOfConnections);
             watch.Stop();
 
             return new ConnectionsResponse()
             {
-                ResponseMessage = $"{message}.{Environment.NewLine}{parameter.NumberOfConnections}\tConnections generated.",
+                ResponseMessage = $"{Connections.Count}\tConnections generated.",
                 Payload = Connections,
                 ResponseTime = watch.Elapsed
             };
-        }
-
-        private string RunChildCommand(int NumberOfContacts)
-        {
-            var ContactsCommand = new ContactsCommand();
-            string[] args = { "", parameter.NumberOfContacts.ToString() };
-            ContactsParameter contactParameter = new ContactsParameter(args);
-            ContactsCommand.SetParameters(contactParameter);
-            var response = ContactsCommand.Run();
-
-            Contacts = response.Payload() as List<ContactEntity>;
-            return response.ResponseMessage();
         }
 
         public void SetParameters(IParameter parameter)
@@ -49,9 +36,9 @@ namespace ClientVerifierCLI.Command.Commands
             this.parameter = parameter as ConnectionsParameter;
         }
 
-        public void SetState()
+        public void SetState(object Contacts)
         {
-            throw new NotImplementedException();
+            this.Contacts = (List<ContactEntity>)Contacts;
         }
 
         private List<ContactConnection> GetConnections(List<ContactEntity> Contacts, int MaxConnections)
