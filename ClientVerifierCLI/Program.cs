@@ -30,6 +30,7 @@ namespace ClientVerifierCLI
                     command.SetParameters(parameter);
                     command.SetState(GetState(input, parameter));
                     var response = command.Run();
+                    SavePayload(input, response);
                     DisplayOutput(response);
                 }
                 catch (Exception e)
@@ -46,7 +47,7 @@ namespace ClientVerifierCLI
             Console.WriteLine($"Run time: {response.ResponseTime().TotalMilliseconds} milliseconds{Environment.NewLine}");
         }
 
-        private static void SavePayload(IResponse response, string input)
+        private static void SavePayload(string input, IResponse response)
         {
             var commandText = input.Split(' ').First();
             switch (commandText)
@@ -56,6 +57,9 @@ namespace ClientVerifierCLI
                     break;
                 case "connections":
                     Connections = response.Payload() as List<ContactConnection>;
+                    break;
+                case "list":
+                default:
                     break;
             }
         }
@@ -77,7 +81,7 @@ namespace ClientVerifierCLI
                         command.SetParameters(contactParameter);
                         var response = command.Run();
                         DisplayOutput(response);
-                        SavePayload(response, string.Join(" ", args));
+                        SavePayload(string.Join(" ", args), response);
                     }
                     return Contacts;
                 case "search":
@@ -90,6 +94,12 @@ namespace ClientVerifierCLI
                         { "contacts", Contacts },
                         { "connections", Connections }
                     };
+                case "list":
+                    if (Contacts == null || Contacts.Count == 0)
+                    {
+                        throw new Exception("You need to run the \"contacts <number_of_contacts>\" command before you can list");
+                    }
+                    return Contacts;
                 default:
                     return null;
             }
