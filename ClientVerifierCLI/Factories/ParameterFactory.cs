@@ -21,6 +21,8 @@ namespace ClientVerifierCLI.Factories
                     return new ContactsParameter(args);
                 case "connections":
                     return new ConnectionsParameter(args);
+                case "list":
+                    return new ListParameter();
                 default:
                     throw new ArgumentException("Invalid command.");
             }

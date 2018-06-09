@@ -15,7 +15,7 @@ namespace ClientVerifierCLI.Parameters
         {
             if (args.Count() < 2)
             {
-                throw new ArgumentException("You need to specify number of connections to be generated");
+                throw new ArgumentException("You need to specify maximum number of connections to be generated for each paring.");
             }
             NumberOfConnections = ParseInteger(args[1]);
             if (args.Count() > 2)
