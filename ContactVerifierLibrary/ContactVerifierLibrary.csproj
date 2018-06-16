@@ -7,8 +7,8 @@
     <ProjectGuid>{3A414F42-D2BF-4DA8-93D2-D996A8E78DBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClientVerifierLibrary</RootNamespace>
-    <AssemblyName>ClientVerifierLibrary</AssemblyName>
+    <RootNamespace>ContactVerifierLibrary</RootNamespace>
+    <AssemblyName>ContactVerifierLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
