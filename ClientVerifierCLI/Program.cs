@@ -1,15 +1,15 @@
-﻿using ClientVerifierCLI.Command.Commands;
-using ClientVerifierCLI.Factories;
-using ClientVerifierCLI.Parameters;
-using ClientVerifierCLI.Response;
-using ClientVerifierLibrary.Contact;
+﻿using ContactVerifierCLI.Command.Commands;
+using ContactVerifierCLI.Factories;
+using ContactVerifierCLI.Parameters;
+using ContactVerifierCLI.Response;
+using ContactVerifierLibrary.Contact;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierCLI
+namespace ContactVerifierCLI
 {
     class Program
     {

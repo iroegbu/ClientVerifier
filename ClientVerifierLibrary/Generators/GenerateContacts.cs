@@ -1,11 +1,11 @@
-﻿using ClientVerifierLibrary.Contact;
+﻿using ContactVerifierLibrary.Contact;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierLibrary.Generators
+namespace ContactVerifierLibrary.Generators
 {
     public class GenerateContacts
     {

@@ -1,11 +1,11 @@
-﻿using ClientVerifierCLI.Parameters;
+﻿using ContactVerifierCLI.Parameters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierCLI.Factories
+namespace ContactVerifierCLI.Factories
 {
     class ParameterFactory
     {

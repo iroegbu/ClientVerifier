@@ -6,8 +6,8 @@ using System.Runtime.Serialization;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Hosting;
-using ClientVerifierLibrary.Contact;
-using ClientVerifierLibrary.Generators;
+using ContactVerifierLibrary.Contact;
+using ContactVerifierLibrary.Generators;
 using Newtonsoft.Json;
 
 namespace ClientVerifierUI.Models.Contact

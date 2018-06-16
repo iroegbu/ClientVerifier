@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using ClientVerifierLibrary.Contact;
-using ClientVerifierLibrary.Generators;
+using ContactVerifierLibrary.Contact;
+using ContactVerifierLibrary.Generators;
 
 namespace ClientVerifierUI.Models.Connection
 {

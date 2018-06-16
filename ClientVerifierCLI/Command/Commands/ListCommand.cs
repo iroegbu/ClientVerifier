@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClientVerifierCLI.Parameters;
-using ClientVerifierCLI.Response;
-using ClientVerifierCLI.Response.Responses;
-using ClientVerifierLibrary.Contact;
+using ContactVerifierCLI.Parameters;
+using ContactVerifierCLI.Response;
+using ContactVerifierCLI.Response.Responses;
+using ContactVerifierLibrary.Contact;
 
-namespace ClientVerifierCLI.Command.Commands
+namespace ContactVerifierCLI.Command.Commands
 {
     class ListCommand : ICommand
     {

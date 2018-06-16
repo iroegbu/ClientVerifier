@@ -1,12 +1,12 @@
-﻿using ClientVerifierLibrary.Contact;
-using ClientVerifierLibrary.Graph;
+﻿using ContactVerifierLibrary.Contact;
+using ContactVerifierLibrary.Graph;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierLibrary.Adapter
+namespace ContactVerifierLibrary.Adapter
 {
     public class NodeAdapter
     {

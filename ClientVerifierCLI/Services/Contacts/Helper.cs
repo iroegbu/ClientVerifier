@@ -1,5 +1,5 @@
-﻿using ClientVerifierLibrary.Contact;
-using ClientVerifierLibrary.Generators;
+﻿using ContactVerifierLibrary.Contact;
+using ContactVerifierLibrary.Generators;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierCLI.Services.Contacts
+namespace ContactVerifierCLI.Services.Contacts
 {
     class Helper
     {
         public IEnumerable<ContactEntity> Get(int Count)
         {
-            var Generator = new ClientVerifierLibrary.Generators.GenerateContacts(Count);
+            var Generator = new ContactVerifierLibrary.Generators.GenerateContacts(Count);
 
             var FirstNames = GetFirstNamesAsync();
             var LastNames = GetLastNamesAsync();

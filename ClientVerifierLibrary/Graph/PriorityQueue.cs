@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierLibrary.Graph
+namespace ContactVerifierLibrary.Graph
 {
     class PriorityQueue<T> : Collection<Node<T>> where T : IComparable
     {
