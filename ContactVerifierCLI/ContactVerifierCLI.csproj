@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{FE1E38B1-1070-4B80-A42F-DA66900DD131}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ClientVerifierCLI</RootNamespace>
-    <AssemblyName>ClientVerifierCLI</AssemblyName>
+    <RootNamespace>ContactVerifierCLI</RootNamespace>
+    <AssemblyName>ContactVerifierCLI</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
