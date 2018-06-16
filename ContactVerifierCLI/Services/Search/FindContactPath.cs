@@ -20,15 +20,28 @@ namespace ContactVerifierCLI.Services.Search
             this.Connections = Connections;
         }
 
-        public void Search(ContactEntity GoalContact)
+        public Node<int> Search(ContactEntity GoalContact)
         {
-
+            var Search = new AStarSearch<int>();
+            var Root = Adaptor();
+            return Search.Search(Root, ContactToNode(GoalContact));
         }
 
         private Node<int> Adaptor()
         {
             var Adapter = new NodeAdapter();
             return Adapter.FromContacts(Contacts, Connections);
+        }
+
+        private Node<int> ContactToNode(ContactEntity Contact)
+        {
+            return new Node<int>()
+            {
+                Value = Contact.ContactID,
+                Label = Contact.ContactName,
+                Cost = Contact.CommuncationFrequency,
+                Heuristics = Contact.Location
+            };
         }
     }
 }

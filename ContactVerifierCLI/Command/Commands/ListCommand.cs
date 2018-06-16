@@ -17,7 +17,7 @@ namespace ContactVerifierCLI.Command.Commands
         public IResponse Run()
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            var Message = String.Join(Environment.NewLine, Contacts.Select(n => n.ContactName).ToArray());
+            var Message = String.Join(Environment.NewLine, Contacts.Select(n => $"{n.ContactID.ToString()} \t {n.ContactName}").ToArray());
             watch.Stop();
 
             IResponse response = new ListResponse()

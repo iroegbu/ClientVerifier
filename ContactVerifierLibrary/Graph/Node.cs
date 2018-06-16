@@ -27,11 +27,12 @@ namespace ContactVerifierLibrary.Graph
             set { cost = value; }
         }
         public int Heuristics { get; set; }
+        public int Weight => Cost + Heuristics;
         public Node<T> Parent { get; set; }
         public List<Node<T>> Children { get; set; }
         public bool IsEqual(T Value)
         {
-            return Value.CompareTo(Value) == 0;
+            return this.Value.CompareTo(Value) == 0;
         }
     }
 }
