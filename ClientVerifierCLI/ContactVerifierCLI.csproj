@@ -74,9 +74,9 @@
     <None Include="Resources\last_names.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClientVerifierLibrary\ClientVerifierLibrary.csproj">
+    <ProjectReference Include="..\ClientVerifierLibrary\ContactVerifierLibrary.csproj">
       <Project>{3a414f42-d2bf-4da8-93d2-d996a8e78dbf}</Project>
-      <Name>ClientVerifierLibrary</Name>
+      <Name>ContactVerifierLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,5 +1,5 @@
-﻿using ClientVerifierLibrary.Adapter;
-using ClientVerifierLibrary.Graph;
+﻿using ContactVerifierLibrary.Adapter;
+using ContactVerifierLibrary.Graph;
 using ClientVerifierUI.Services;
 using System;
 using System.Collections.Generic;

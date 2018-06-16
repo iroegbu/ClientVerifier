@@ -260,9 +260,9 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClientVerifierLibrary\ClientVerifierLibrary.csproj">
+    <ProjectReference Include="..\ClientVerifierLibrary\ContactVerifierLibrary.csproj">
       <Project>{3a414f42-d2bf-4da8-93d2-d996a8e78dbf}</Project>
-      <Name>ClientVerifierLibrary</Name>
+      <Name>ContactVerifierLibrary</Name>
       <Private>True</Private>
     </ProjectReference>
   </ItemGroup>

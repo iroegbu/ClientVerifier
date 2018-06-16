@@ -1,16 +1,16 @@
-﻿using ClientVerifierCLI.Parameters;
-using ClientVerifierCLI.Response;
-using ClientVerifierLibrary.Contact;
-using ClientVerifierCLI.Services.Connections;
+﻿using ContactVerifierCLI.Parameters;
+using ContactVerifierCLI.Response;
+using ContactVerifierLibrary.Contact;
+using ContactVerifierCLI.Services.Connections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClientVerifierCLI.Services.Contacts;
-using ClientVerifierCLI.Response.Responses;
+using ContactVerifierCLI.Services.Contacts;
+using ContactVerifierCLI.Response.Responses;
 
-namespace ClientVerifierCLI.Command.Commands
+namespace ContactVerifierCLI.Command.Commands
 {
     class ConnectionsCommand : ICommand
     {

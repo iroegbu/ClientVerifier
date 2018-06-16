@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierLibrary.Graph
+namespace ContactVerifierLibrary.Graph
 {
     /// <summary>
     /// Implements A* search Algorithm

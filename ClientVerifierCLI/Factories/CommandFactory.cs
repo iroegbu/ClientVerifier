@@ -1,12 +1,12 @@
-﻿using ClientVerifierCLI.Command;
-using ClientVerifierCLI.Command.Commands;
+﻿using ContactVerifierCLI.Command;
+using ContactVerifierCLI.Command.Commands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierCLI.Factories
+namespace ContactVerifierCLI.Factories
 {
     class CommandFactory
     {

@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientVerifierUI", "ClientVerifierUI\ClientVerifierUI.csproj", "{67F7A12A-A2A3-400D-8718-90219ACBC2FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientVerifierLibrary", "ClientVerifierLibrary\ClientVerifierLibrary.csproj", "{3A414F42-D2BF-4DA8-93D2-D996A8E78DBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactVerifierLibrary", "ClientVerifierLibrary\ContactVerifierLibrary.csproj", "{3A414F42-D2BF-4DA8-93D2-D996A8E78DBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientVerifierCLI", "ClientVerifierCLI\ClientVerifierCLI.csproj", "{FE1E38B1-1070-4B80-A42F-DA66900DD131}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactVerifierCLI", "ClientVerifierCLI\ContactVerifierCLI.csproj", "{FE1E38B1-1070-4B80-A42F-DA66900DD131}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

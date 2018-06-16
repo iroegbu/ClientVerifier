@@ -1,10 +1,10 @@
-﻿using ClientVerifierLibrary.Contact;
+﻿using ContactVerifierLibrary.Contact;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace ClientVerifierCLI.Services.Connections
+namespace ContactVerifierCLI.Services.Connections
 {
     public class GenerateConnections
     {

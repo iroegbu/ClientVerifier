@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClientVerifierLibrary.Contact
+namespace ContactVerifierLibrary.Contact
 {
     public class ContactEntity
     {

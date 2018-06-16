@@ -1,4 +1,4 @@
-﻿using ClientVerifierLibrary.Contact;
+﻿using ContactVerifierLibrary.Contact;
 using ClientVerifierUI.Models.Connection;
 using System;
 using System.Collections.Generic;
