@@ -24,6 +24,8 @@ namespace ContactVerifierCLI.Factories
                     return new ConnectionsCommand();
                 case "list":
                     return new ListCommand();
+                case "search":
+                    return new VerifyCommand();
                 default:
                     throw new ArgumentException("Invalid command.");
             }

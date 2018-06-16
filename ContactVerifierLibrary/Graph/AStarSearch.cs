@@ -9,7 +9,7 @@ namespace ContactVerifierLibrary.Graph
     /// <summary>
     /// Implements A* search Algorithm
     /// </summary>
-    class AStarSearch<T> where T : IComparable
+    public class AStarSearch<T> where T : IComparable
     {
         private PriorityQueue<T> Open;
 
@@ -29,6 +29,7 @@ namespace ContactVerifierLibrary.Graph
             {
                 InitSearch(Root);
             }
+            var Closed = new List<Node<T>>();
             while (Open.Count != 0)
             {
                 var Current = Open.Pop();
@@ -36,10 +37,21 @@ namespace ContactVerifierLibrary.Graph
                 {
                     return Current;
                 }
+                Closed.Add(Current);
                 var _Children = Current.Children;
                 foreach (var _Child in _Children)
                 {
-                    Open.Add(_Child);
+                    if (Closed.Contains(_Child))
+                    {
+                        var OldEntry = Closed.Find(x => x.IsEqual(_Child.Value));
+                        if (_Child.Weight < OldEntry.Weight)
+                        {
+                            Open.Add(_Child);
+                        }
+                    } else
+                    {
+                        Open.Add(_Child);
+                    }
                 }
             }
             return Goal;

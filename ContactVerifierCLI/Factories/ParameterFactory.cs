@@ -23,6 +23,8 @@ namespace ContactVerifierCLI.Factories
                     return new ConnectionsParameter(args);
                 case "list":
                     return new ListParameter();
+                case "search":
+                    return new VerifyParameter(args);
                 default:
                     throw new ArgumentException("Invalid command.");
             }

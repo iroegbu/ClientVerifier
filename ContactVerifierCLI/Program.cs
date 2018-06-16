@@ -89,7 +89,7 @@ namespace ContactVerifierCLI
                     {
                         throw new Exception("You need to run the \"connections <connections_frequency> [<number_of_contacts>]\" command before you can search");
                     }
-                        return new Dictionary<string, object>
+                    return new Dictionary<string, object>
                     {
                         { "contacts", Contacts },
                         { "connections", Connections }
